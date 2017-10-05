@@ -1,0 +1,9 @@
+{
+	"id": "php_check_syntax",
+	"version": "1.0",
+	"description": "Replacement for php_check_syntax()",
+	"categories": [
+		"security"
+	],
+	"compatible_from": "2017.4"
+}
