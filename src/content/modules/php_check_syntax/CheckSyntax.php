@@ -80,8 +80,11 @@ if (! function_exists ( "php_check_syntax" )) {
 	function php_check_syntax($filename, &$error_message = null) {
 		try {
 			CheckSyntax ( $filename, true );
+			return true;
 		} catch ( Exception $e ) {
 			$error_message = $e->getMessage ();
 		}
+
+		return false;
 	}
 }
