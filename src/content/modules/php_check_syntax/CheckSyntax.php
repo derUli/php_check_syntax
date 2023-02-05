@@ -8,7 +8,7 @@ function CheckSyntax($fileName, $checkIncludes = true) {
 	// Sort out the formatting of the filename
 	$fileName = realpath ( $fileName );
 	
-	if (! func_enabled ( "shell_exec" )) {
+	if (!func_enabled( "shell_exec" )) {
 		return;
 	}
 	
@@ -34,6 +34,7 @@ function CheckSyntax($fileName, $checkIncludes = true) {
 		}
 	}
 }
+
 function GetIncludes($fileName) {
 	// NOTE that any file coming into this function has already passed the syntax check, so
 	// we can assume things like proper line terminations
@@ -74,6 +75,7 @@ function GetIncludes($fileName) {
 	
 	return $includes;
 }
+
 if (! function_exists ( "php_check_syntax" )) {
 	function php_check_syntax($filename, &$error_message = null) {
 		try {
